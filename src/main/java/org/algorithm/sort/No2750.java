@@ -12,6 +12,7 @@ public class No2750 {
             numbers[i] = scanner.nextInt();
         }
         code(numbers);
+        scanner.close();
     }
 
     public static void code(int[] numbers) {
