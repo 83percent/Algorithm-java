@@ -1,27 +1,27 @@
 package test.programmers;
 
-import org.algorithm.programmers.StringOverwrite01;
+import org.algorithm.programmers.FruitSeller;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.Arguments;
 import org.junit.jupiter.params.provider.MethodSource;
+import test.util.TestUtil;
 
 import java.util.stream.Stream;
-
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-public class StringOverwrite01Test {
-
+public class FruitSellerTest {
     @ParameterizedTest
     @MethodSource("provideCase")
-    public void test(String my_string, String overwrite_string, int s, String resultOutput) {
-        String actualOutput =  new StringOverwrite01().solution(my_string, overwrite_string, s);
+    public void test(int k, int m, int[] score, int resultOutput) {
+        FruitSeller fruitSeller = new FruitSeller();
+        int actualOutput = fruitSeller.solution(k, m, score);
         assertEquals(resultOutput, actualOutput);
     }
 
     private static Stream<Arguments> provideCase() {
         return Stream.of(
-                Arguments.of("He11oWor1d","lloWorl",2,"HelloWorld"),
-                Arguments.of("Program29b8UYP","merS123",7,"ProgrammerS123")
+                Arguments.of(3, 4, new int[]{1, 2, 3, 1, 2, 3, 1}, 8),
+                Arguments.of(4, 3, new int[]{4, 1, 2, 2, 4, 4, 4, 4, 1, 2, 4, 2}, 33)
         );
 
     }
