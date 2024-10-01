@@ -1,12 +1,12 @@
 package org.algorithm;
 
-import java.util.ArrayList;
-import java.util.Collection;
-import java.util.List;
+import java.util.*;
 
 public class Main {
     public static void main(String[] args) {
-        List<String> list = new ArrayList<>();
-        Collection<String> collection = list;
+        Queue<String> queue = new LinkedList<>();
+        queue.offer("t");
+
+        String element = queue.element();
     }
 }
