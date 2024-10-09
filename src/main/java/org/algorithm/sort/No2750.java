@@ -3,7 +3,7 @@ package org.algorithm.sort;
 import java.util.Arrays;
 import java.util.Scanner;
 
-public class Sort2750 {
+public class No2750 {
     public static void main(String args[]) {
         Scanner scanner = new Scanner(System.in);
         int size = scanner.nextInt();
@@ -12,6 +12,7 @@ public class Sort2750 {
             numbers[i] = scanner.nextInt();
         }
         code(numbers);
+        scanner.close();
     }
 
     public static void code(int[] numbers) {
